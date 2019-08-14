@@ -1,4 +1,6 @@
 #!/bin/python3
+# -*- coding: UTF-8 -*-
+
 import platform
 
 """
@@ -12,3 +14,8 @@ print("你好，Python3")
 
 # 查看Python 版本信息
 print("使用Python当前版本为： " + platform.python_version())
+
+
+print("Hello Lxh!")
+
+
