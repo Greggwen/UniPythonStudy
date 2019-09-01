@@ -37,3 +37,21 @@ a = Animal()
 
 # 反过来后，尽快Dog和Cat继承了Animal，Animal的实例变量也不可能与Dog或Cat变量类型一致
 print(isinstance(a, Dog))
+
+# 实例属性与类属性
+
+class Student(object):
+    name = 'Student'
+
+s = Student()
+print(s.name)
+print(Student.name)
+
+s.name = 'Rolly'
+
+print(s.name)
+print(Student.name)
+
+del s.name
+print(s.name)
+# 相同名称的实例属性将屏蔽掉类属性，但是当你删除实例属性后，再使用相同的名称，访问到的将是类属性
