@@ -90,3 +90,5 @@ bower_components
 .env
 .remote-sync.json
 .vscode/*
+*.txt
+*.jpeg
