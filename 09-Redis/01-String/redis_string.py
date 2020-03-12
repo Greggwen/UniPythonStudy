@@ -44,3 +44,16 @@ print(str_len) # output 17
 
 str_len = redis_client.strlen('four')
 print(str_len) # output 0
+
+
+print("the value of the third key is: ", redis_client.get('third'))
+
+# append: return the eventual value length
+append_return = redis_client.append("third", "!Please retodo")
+
+print(append_return)
+
+print(redis_client.get('third'))
+
+not_exists = redis_client.append("five", "the key of five not exists")
+print(not_exists, redis_client.get('five'))
