@@ -92,3 +92,16 @@ print(decimal)
 redis_client.incrbyfloat('decimal', 2.33)
 decimal = redis_client.get('decimal')
 print(decimal)
+
+
+week_dict = {}
+week_dict['Mon'] = "周一"
+week_dict['Tue'] = "周二"
+week_dict['Wen'] = "周三"
+week_dict['Thur'] = "周四"
+week_dict['Fri'] = "周五"
+week_dict['Sat'] = "周六"
+week_dict['Sun'] = "周日"
+redis_client.mset(week_dict)
+mret = redis_client.mget('Mon', 'Tue', 'Sun')
+print(mret)
