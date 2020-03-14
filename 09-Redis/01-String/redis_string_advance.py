@@ -105,3 +105,20 @@ week_dict['Sun'] = "周日"
 redis_client.mset(week_dict)
 mret = redis_client.mget('Mon', 'Tue', 'Sun')
 print(mret)
+
+
+
+redis_client.set('Jan', '一月')
+redis_client.set('Feb', '二月')
+
+
+month_dict = {}
+month_dict['Jan'] = '一月'
+month_dict['Feb'] = '二月'
+month_dict['Mar'] = '三月'
+
+
+redis_client.msetnx(month_dict)
+
+month_ret = redis_client.mget('Jan', 'Feb', 'Mar')
+print(month_ret)
